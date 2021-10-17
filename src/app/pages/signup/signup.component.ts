@@ -59,7 +59,7 @@ export class SignupComponent implements OnInit {
         this.toastr.success(`SignUp Success`);
       })
       .catch((err) => {
-        this.toastr.error(`SignUp filed!!!`);
+        this.toastr.error(`SignUp failed!!!`);
       });
   }
 

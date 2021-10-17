@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   ) {
     auth.getUser().subscribe(
       (user) => {
-        console.log(`User is : ${ user}`);        
+        console.log(`User is : ${user}`);        
         this.email = user?.email
       }
     )
@@ -27,7 +27,8 @@ export class HeaderComponent implements OnInit {
   async handleSignOut() {
     try {
       await this.auth.signOut();
-      this.router.navigateByUrl('/signin');
+      this.router.navigateByUrl("/signin");
+
       this.toastr.info(`Login again to continue...`);
       this.email = null;
     } catch (error) {
