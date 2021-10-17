@@ -12,8 +12,8 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { AngularFireAuthGuard, redirectLoggedInTo, redirectUnauthorizedTo } from "@angular/fire/compat/auth-guard"
 
-const redirectUnauthorizedToLogin = async () => await redirectUnauthorizedTo(['signin']);
-const redirectLoggedInToHome = async () => await redirectLoggedInTo(['']);
+const redirectUnauthorizedToLogin =  () =>  redirectUnauthorizedTo(['signin']);
+const redirectLoggedInToHome =  () =>  redirectLoggedInTo(['']);
 
 const routes: Routes = [
   {

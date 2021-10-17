@@ -48,7 +48,7 @@ export class SignupComponent implements OnInit {
           id: uid,
           name: name,
           email: email,
-          instaUSerNAme: username,
+          instaUserName: username,
           country: country,
           bio: bio,
           picture: this.picture,

@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     auth.getUser().subscribe(
       (user) => {
         console.log(`User is : ${user}`);        
-        this.email = user?.email
+        this.email = user?.email;
       }
     )
   }

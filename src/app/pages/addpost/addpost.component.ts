@@ -45,6 +45,8 @@ export class AddpostComponent implements OnInit {
         .valueChanges()
         .subscribe((user) => {
           this.user = user;
+          console.log(`user details ${user}`);
+          
         });
     });
   }
@@ -54,7 +56,7 @@ export class AddpostComponent implements OnInit {
 
   onSubmit() {
     const uid = uuidv4();
-
+    console.log(`name is ${this.user.name}`);
     this.db.object(`/posts/${uid}`)
       .set({
         id: uid,
@@ -67,7 +69,9 @@ export class AddpostComponent implements OnInit {
       })
       .then(() => {
         this.toastr.success("Post added successfully");
-        this.router.navigateByUrl("/");
+        console.log("done");
+        
+        this.router.navigateByUrl('/');
       })
       .catch((err) => {
         this.toastr.error("Oopsss");
